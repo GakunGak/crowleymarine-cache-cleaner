@@ -1,0 +1,55 @@
+<!--
+    Coded by Dragan GakunGak Jovanov
+    https:
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowley Marine Cache Cleaner</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="icons/icon48.png" alt="Crowley Marine Cache Cleaner" class="logo-icon">
+                <h1 class="title">Cache Cleaner</h1>
+            </div>
+            <div class="toggle-container">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="extensionToggle" checked>
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label" id="toggleLabel">ON</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="status-section">
+                <div class="status-indicator" id="statusIndicator">
+                    <div class="status-dot active" id="statusDot"></div>
+                    <span class="status-text" id="statusText">Active</span>
+                </div>
+            </div>
+
+            <div class="reload-section" id="reloadSection" style="display: none;">
+                <p class="reload-message">Reload Crowley tabs to see the change.</p>
+                <button class="reload-button" id="reloadButton">
+                    <span class="btn-icon">🔄</span>
+                    Reload Crowley Tabs
+                </button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-text">
+                <span>Crowley Marine Cache Cleaner v3.1.0</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
