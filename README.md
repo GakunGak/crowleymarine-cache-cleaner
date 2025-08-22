@@ -1,6 +1,6 @@
 # Crowley Marine Cache Cleaner
 
-Coded by Dragan GakunGak Jovanov - https:
+Coded by Dragan GakunGak Jovanov - 
 
 A simple Chrome extension that adds a floating "Clear Cache" button to Crowley Marine websites. This helps developers and content managers quickly view the latest changes without dealing with cached versions of the site.
 
@@ -8,7 +8,7 @@ A simple Chrome extension that adds a floating "Clear Cache" button to Crowley M
 
 - **Simple On/Off Toggle**: Easily enable or disable the extension from the popup.
 - **Floating "Clear Cache" Button**: A convenient button is added to all Crowley Marine pages when the extension is active.
-- **One-Click Cache Clearing**: Clicking the button reloads the page with a `?clearcache` parameter, forcing the server to send the latest version of the page.
+- **One-Click Cache Clearing**: Clicking the button reloads the page with a `/?clearcache` parameter, forcing the server to send the latest version of the page.
 - **Real-time Updates**: The floating button appears or disappears instantly as you toggle the extension on or off, without needing a manual refresh.
 - **Reload Prompt**: The popup prompts you to reload all Crowley Marine tabs after enabling or disabling the extension to ensure the changes take effect everywhere.
 
