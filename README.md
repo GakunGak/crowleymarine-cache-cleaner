@@ -1,6 +1,6 @@
 # Crowley Marine Cache Cleaner
 
-Coded by Dragan GakunGak Jovanov - 
+Coded by Dragan GakunGak Jovanov 
 
 A simple Chrome extension that adds a floating "Clear Cache" button to Crowley Marine websites. This helps users, developers and content managers quickly view the latest changes without dealing with cached versions of the site.
 
