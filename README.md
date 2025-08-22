@@ -47,7 +47,7 @@ A simple Chrome extension that adds a floating "Clear Cache" button to Crowley M
     *   Go to any page on `www.crowleymarine.com`.
 
 3.  **Use the Floating Button**:
-    *   You should see a "Clear Cache" button floating in the bottom-right corner of the page.
+    *   You should see a "Clear Cache" button floating in the upper-right corner of the page.
     *   Click this button to reload the page and clear its cache.
 
 4.  **Disabling the Extension**:
