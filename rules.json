@@ -1,0 +1,17 @@
+
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "\\1/?clearcache"
+      }
+    },
+    "condition": {
+      "regexFilter": "^(https?://(?:www\\.)?crowleymarine\\.com(?:/[^?#]*)??)(?:\\?(?!.*clearcache).*)?(?:#.*)?$",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  }
+]

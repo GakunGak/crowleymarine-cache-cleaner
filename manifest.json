@@ -1,8 +1,9 @@
+
 {
   "manifest_version": 3,
   "name": "Crowley Marine Cache Cleaner",
-  "version": "3.1.0",
-  "description": "Adds a floating button to clear cache on Crowley Marine pages.",
+  "version": "3.2.0",
+  "description": "Automatically adds cache clearing parameter to Crowley Marine pages and provides a manual floating button.",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
@@ -14,12 +15,22 @@
   },
   "permissions": [
     "storage",
-    "tabs"
+    "tabs",
+    "declarativeNetRequest"
   ],
   "host_permissions": [
     "*://*.crowleymarine.com/*",
     "*://crowleymarine.com/*"
   ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "crowley_cache_rules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
   "action": {
     "default_popup": "popup.html",
     "default_title": "Crowley Marine Cache Cleaner"
