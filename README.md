@@ -2,18 +2,27 @@
 
 Coded by Dragan GakunGak Jovanov 
 
-A simple Chrome extension that adds a floating "Clear Cache" button to Crowley Marine websites. This helps users, developers and content managers quickly view the latest changes without dealing with cached versions of the site.
+A Chrome extension that automatically adds cache clearing parameters to Crowley Marine websites and provides a manual floating "Clear Cache" button. This helps users, developers and content managers quickly view the latest changes without dealing with cached versions of the site.
 
-<img width="1395" height="748" alt="image" src="https://github.com/user-attachments/assets/4f85689f-d98b-4fc0-a8b3-ade581bbe42e" />
+<img width="1395" height="748" alt="image" src="https://github.com/user-attachments/assets/348b9290-5a83-4d77-b22b-c2e82c4c4269" />
 
 
 ## Features
 
-- **Simple On/Off Toggle**: Easily enable or disable the extension from the popup.
-- **Floating "Clear Cache" Button**: A convenient button is added to all Crowley Marine pages when the extension is active.
-- **One-Click Cache Clearing**: Clicking the button reloads the page with a `/?clearcache` parameter, forcing the server to send the latest version of the page.
-- **Real-time Updates**: The floating button appears or disappears instantly as you toggle the extension on or off, without needing a manual refresh.
-- **Reload Prompt**: The popup prompts you to reload all Crowley Marine tabs after enabling or disabling the extension to ensure the changes take effect everywhere.
+- **Automatic Cache Clearing**: Every crowleymarine.com page visit automatically gets `/?clearcache` parameter added before page loads
+- **Manual Override Button**: A floating "Clear Cache" button is still available for manual cache clearing
+- **Simple On/Off Toggle**: Easily enable or disable both automatic and manual functionality from the popup
+- **Smart URL Handling**: Only applies to main crowleymarine.com domain and subpages (not subdomains)
+- **Real-time Updates**: The floating button appears or disappears instantly as you toggle the extension on or off
+- **Reload Prompt**: The popup prompts you to reload all Crowley Marine tabs after enabling or disabling the extension
+
+## How It Works
+
+### Automatic Cache Clearing
+When enabled, the extension automatically intercepts navigation to any `crowleymarine.com` or `www.crowleymarine.com` URL and adds the `/?clearcache` parameter before the page loads. This ensures every page visit gets fresh content without any manual intervention.
+
+### Manual Override
+The familiar floating "Clear Cache" button remains available as a manual override option, appearing in the top-right corner of Crowley Marine pages when the extension is active.
 
 ## Installation
 
@@ -47,19 +56,28 @@ A simple Chrome extension that adds a floating "Clear Cache" button to Crowley M
     *   Make sure the toggle switch is set to "ON".
 
 2.  **Navigate to a Crowley Marine Page**:
-    *   Go to any page on `www.crowleymarine.com`.
+    *   Go to any page on `crowleymarine.com` or `www.crowleymarine.com`.
+    *   The page will automatically load with cache clearing enabled.
 
-3.  **Use the Floating Button**:
-    *   You should see a "Clear Cache" button floating in the upper-right corner of the page.
-    *   Click this button to reload the page and clear its cache.
+3.  **Manual Override (Optional)**:
+    *   You'll also see a "Clear Cache" button floating in the upper-right corner of the page.
+    *   Click this button for manual cache clearing if needed.
 
 4.  **Disabling the Extension**:
     *   Open the popup and set the toggle switch to "OFF".
-    *   The floating button will be removed from all Crowley Marine pages instantly.
+    *   Both automatic cache clearing and the floating button will be disabled.
 
 ## Changelog
 
-### Version 3.1.0 (Current)
+### Version 3.2.0 - September 13, 2025 (Current)
+- **NEW**: **Automatic Cache Clearing** - Every crowleymarine.com page visit now automatically gets `/?clearcache` parameter added before page loads
+- **Enhanced**: Manual floating button remains available as fallback/override option
+- **Improved**: Uses Chrome's declarativeNetRequest API for efficient URL interception
+- **Updated**: Status indicator now shows "Auto + Manual Active" when enabled
+- **Technical**: Added rules.json for declarative net request configuration
+- **Smart**: Only applies to main crowleymarine.com domain and subpages (excludes subdomains)
+
+### Version 3.1.0
 - **Fixed**: Floating button now appears and disappears reliably.
 - **Real-time Updates**: The floating button's visibility is now updated instantly across all open Crowley Marine tabs when the extension is toggled.
 - **Improved Reload**: The reload button in the popup now reloads all open Crowley Marine tabs at once.
@@ -81,6 +99,23 @@ A simple Chrome extension that adds a floating "Clear Cache" button to Crowley M
 ### Version 1.0.0
 - Initial release.
 - Automatically appended `/?clearcache` to all Crowley Marine URLs.
+
+## Technical Details
+
+### URL Transformation
+- **Input**: `https://crowleymarine.com/path` or `https://crowleymarine.com/path/`
+- **Output**: `https://crowleymarine.com/path/?clearcache`
+- **Display**: After page loads, URL shows as `https://crowleymarine.com/path?clearcache`
+
+### Domain Scope
+- ✅ `crowleymarine.com`
+- ✅ `www.crowleymarine.com`
+- ❌ `subdomain.crowleymarine.com` (excluded)
+
+### Browser Compatibility
+- Chrome 88+
+- Other Chromium-based browsers (Edge, Brave, etc.)
+- Manifest V3 compliant
 
 ## Contributing
 

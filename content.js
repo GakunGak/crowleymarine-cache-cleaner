@@ -1,3 +1,4 @@
+
 /*
     Coded by Dragan GakunGak Jovanov
     https://github.com/GakunGak
@@ -39,7 +40,7 @@ function createFloatingButton() {
     `;
     floatingButton.className = 'crowley-cache-cleaner-button';
     floatingButton.setAttribute('aria-label', 'Clear page cache');
-    floatingButton.setAttribute('title', 'Clear Cache - Reload page with fresh content');
+    floatingButton.setAttribute('title', 'Clear Cache - Reload page with fresh content (Manual override)');
     
     // Set all CSS properties directly with !important to override any website styles
     const buttonStyles = {
@@ -140,7 +141,7 @@ function createFloatingButton() {
     // Force a reflow to ensure positioning is applied
     floatingButton.offsetHeight;
     
-    console.log('Crowley Cache Cleaner: Floating button created at TOP-RIGHT position');
+    console.log('Crowley Cache Cleaner: Manual floating button created at TOP-RIGHT position');
 }
 
 function removeFloatingButton() {
@@ -160,7 +161,7 @@ function removeFloatingButton() {
 }
 
 function clearPageCache() {
-    showNotification('Clearing cache...', 'primary');
+    showNotification('Manually clearing cache...', 'primary');
     
     // Add a small delay to show the notification before redirect
     setTimeout(() => {
@@ -242,9 +243,10 @@ async function init() {
                 createFloatingButton();
             }
             
+            // Show success notification if page was automatically cleared
             if (window.location.href.includes('clearcache')) {
                 setTimeout(() => {
-                    showNotification('Cache has been cleared!', 'success');
+                    showNotification('Cache automatically cleared on page load!', 'success');
                 }, 1000);
             }
         }

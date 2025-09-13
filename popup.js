@@ -1,3 +1,4 @@
+
 /*
     Coded by Dragan GakunGak Jovanov
     https://github.com/GakunGak
@@ -35,7 +36,7 @@ class PopupManager {
     updateToggleUI(isEnabled) {
         this.toggleLabel.textContent = isEnabled ? 'ON' : 'OFF';
         this.statusDot.className = `status-dot ${isEnabled ? 'active' : 'inactive'}`;
-        this.statusText.textContent = isEnabled ? 'Active' : 'Inactive';
+        this.statusText.textContent = isEnabled ? 'Auto + Manual Active' : 'Inactive';
     }
 
     setupEventListeners() {
