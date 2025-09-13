@@ -4,7 +4,8 @@ Coded by Dragan GakunGak Jovanov
 
 A Chrome extension that automatically adds cache clearing parameters to Crowley Marine websites and provides a manual floating "Clear Cache" button. This helps users, developers and content managers quickly view the latest changes without dealing with cached versions of the site.
 
-<img width="1395" height="748" alt="image" src="https://lh3.googleusercontent.com/zAuHtdlp-JcUx4Yblhfll5TJyuM7HIgPnYvl3-4bfwqnR8ECRh7OEWoFPoEBFazuqFV8it9uJHhDB69HC5Sjk7nkpQ=s1280-w1280-h800" />
+<img width="1395" height="748" alt="image" src="https://github.com/user-attachments/assets/348b9290-5a83-4d77-b22b-c2e82c4c4269" />
+
 
 ## Features
 
